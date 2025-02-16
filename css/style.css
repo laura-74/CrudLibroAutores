@@ -1,0 +1,73 @@
+
+/*Fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=DM+Serif+Display:ital@0;1&family=Lilita+One&family=Patua+One&display=swap');
+:root {
+  --color-black: black;
+  --color-white: white;
+  --fuente-SerifDisplay: "DM Serif Display", sans-serif;
+  --fuente-reboto: "Roboto Serif", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-SerifDisplay);
+  background-image: url(/imagenes/pexels-riciardus-300857.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+/*Header*/
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 3.5rem;
+}
+
+
+.container_div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.autor_libro_div {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: min-content;
+  padding: 2rem;
+  font-size: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.5rem;
+}
+
+.link-arrow::after {
+  content: ' ➔'; /* Agrega una flecha después del texto del enlace */
+  font-size: 1rem;
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--color-white);
+}

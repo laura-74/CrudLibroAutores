@@ -1,0 +1,92 @@
+/*Fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=DM+Serif+Display:ital@0;1&family=Lilita+One&family=Patua+One&display=swap');
+
+:root {
+    --color-black: black;
+    --color-white: white;
+    --fuente-SerifDisplay: "DM Serif Display", sans-serif;
+    --fuente-reboto: "Roboto Serif", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-SerifDisplay);
+    background-image: url(/imagenes/pexels-riciardus-300857.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/*Header*/
+.p_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.a_volver {
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 3.3rem 0 0 2rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    font-size: 2rem;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.form_div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: min-content;
+    padding: 2rem;
+    font-size: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0.5rem;
+}
+
+
+
+.input_cambio_nombre {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    width: 80%;
+}
+
+input[type="submit"] {
+    margin-top: 2rem;
+    cursor: pointer;
+    font-size: large;
+    font-family: inherit;
+    font-weight: bold;
+    color: #0145ff;
+    background-color: #f8f8fd;
+    padding: 0.8em 2.2em;
+    border-radius: 50em;
+    border: 6px solid #54aaff;
+    box-shadow: 0px 8px #1f79ff;
+}
+
+input[type="submit"]:active {
+    position: relative;
+    top: 8px;
+    border: 6px solid #0033ff;
+    box-shadow: 0px 0px;
+}

@@ -1,0 +1,107 @@
+/*Fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=DM+Serif+Display:ital@0;1&family=Lilita+One&family=Patua+One&display=swap');
+
+:root {
+    --color-black: black;
+    --color-white: white;
+    --fuente-SerifDisplay: "DM Serif Display", sans-serif;
+    --fuente-reboto: "Roboto Serif", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-SerifDisplay);
+    background-image: url(/imagenes/pexels-riciardus-300857.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/*Header*/
+.p_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 5rem;
+    margin: 0;
+}
+
+.a_volver {
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 3.3rem 0 0 2rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    font-size: 2rem;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.section_div {
+    display: flex;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    gap: 2rem;
+    height: min-content;
+}
+
+.form_div{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 0.5rem;
+}
+
+.input_cambio_nombre{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-black);
+}
+.nombre_categoria_div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+input[type="submit"] {
+    margin-top: 2rem;
+
+    cursor: pointer;
+    font-size: large;
+    font-family: inherit;
+    font-weight: bold;
+    color: #005eff;
+    background-color: #f8f8fd;
+    padding: 0.8em 2.2em;
+    border-radius: 50em;
+    border: 6px solid #54aaff;
+    box-shadow: 0px 8px #1f79ff;
+}
+
+input[type="submit"]:active {
+    position: relative;
+    top: 8px;
+    border: 6px solid #005eff;
+    box-shadow: 0px 0px;
+}
+
+label{
+    font-size: 1.5rem;
+}
