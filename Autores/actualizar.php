@@ -1,10 +1,10 @@
 <?php
-/*incluye la clase Libro y CrudLibro*/
+/* Incluye la clase Autor y CrudAutor */
 require_once('crud_autor.php');
 require_once('autor.php');
 $crud_autor = new crudAutor();
-$autor = new autor();
-/*buscar el autor utilizando el id que es enviado por GET desde la vista mostrar.php*/
+$autor = new Autor();
+/* Buscar el autor utilizando el id que es enviado por GET desde la vista mostrar.php */
 $autor = $crud_autor->obtenerAutor($_GET['id']);
 ?>
 
@@ -30,12 +30,30 @@ $autor = $crud_autor->obtenerAutor($_GET['id']);
         <section class="section_div">
             <form class="form" action="administrar_autor.php" method="post">
                 <div class="form_div">
-                    <input type="hidden" name="id" value="<?php echo $autor->getId() ?>">
-                    <div class="nombre_div">
-                        <p>Nombre Autor:</p>
+                    <div>
+                        <input type="hidden" name="id" value="<?php echo $autor->getId() ?>">
+                        <p>Nombre</p>
+                        <input class="input_cambio_nombre" type="text" name="nombre" value="<?php echo $autor->getNombre() ?>" placeholder="Ingrese el nombre..." required>
                     </div>
-                    <div class="nombre_div">
-                        <input class="input_cambio_nombre" type="text" name="nombre" value="<?php echo $autor->getNombre() ?>" required>
+                    <div>
+                        <p>Apellido</p>
+                        <input class="input_cambio_nombre" type="text" name="apellido" value="<?php echo $autor->getApellido() ?>" placeholder="Ingrese el apellido..." required>
+                    </div>
+                    <div>
+                        <p>Dirección</p>
+                        <input class="input_cambio_nombre" type="text" name="direccion" value="<?php echo $autor->getDireccion() ?>" placeholder="Ingrese la dirección..." required>
+                    </div>
+                    <div>
+                        <p>Teléfono</p>
+                        <input class="input_cambio_nombre" type="text" name="telefono" value="<?php echo $autor->getTelefono() ?>" placeholder="Ingrese el teléfono..." required>
+                    </div>
+                    <div>
+                        <p>Email</p>
+                        <input class="input_cambio_nombre" type="email" name="email" value="<?php echo $autor->getEmail() ?>" placeholder="Ingrese el email..." required>
+                    </div>
+                    <div>
+                        <p>Ciudad</p>
+                        <input class="input_cambio_nombre" type="text" name="ciudad" value="<?php echo $autor->getCiudad() ?>" placeholder="Ingrese la ciudad..." required>
                     </div>
                     <div class="nombre_div">
                         <input type="hidden" name="actualizar" value="actualizar">

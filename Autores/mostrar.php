@@ -31,8 +31,14 @@ $listaAutor = $crud_autor->mostrar();
 
         <head>
             <td><strong>Nombre</strong></td>
+            <td><strong>Apellido</strong></td>
+            <td><strong>Dirección</strong></td>
+            <td><strong>Teléfono</strong></td>
+            <td><strong>Email</strong></td>
+            <td><strong>Ciudad</strong></td>
             <td><strong>Actualizar</strong></td>
             <td><strong>Eliminar</strong></td>
+
         </head>
 
         <body>
@@ -40,6 +46,11 @@ $listaAutor = $crud_autor->mostrar();
             <?php foreach ($listaAutor as $autor) { ?>
                 <tr>
                     <td><?php echo $autor->getNombre() ?></td>
+                    <td><?php echo $autor->getApellido() ?></td>
+                    <td><?php echo $autor->getDireccion() ?></td>
+                    <td><?php echo $autor->getTelefono() ?></td>
+                    <td><?php echo $autor->getEmail() ?></td>
+                    <td><?php echo $autor->getCiudad() ?></td>
                     <td><a class="a_actualizar" href="actualizar.php?id=<?php echo $autor->getId() ?>&accion=a">Actualizar</a> </td>
                     <td>
                         <a class="a_eliminar" href="administrar_autor.php?id=<?php echo $autor->getId() ?>&accion=e" aria-label="Delete item">
